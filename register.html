@@ -9,17 +9,17 @@
     <a href="index.html">     主页</a>
     <h1>创建账户</h1>
     <section>
-        <form action="#" method="post">
+        <form action="#" method="POST">
             <p>请输入您的用户名（只支持大小写字母，数字和下划线）</p>
-            <input type="text"name="name"required pattern="">
+            <input type="text"name="name"required pattern="^*[A-Za-z0-9]$">
            <br/>
             <p>
                 请设置密码（8位以上，只允许大小写字母加数字）<br>
-                <input type="password" name="password">
+                <input type="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$">
             </p>
             <p>
                 请确认密码<br>
-                <input type="password" name="repassword">
+                <input type="password" name="repassword" required pattern="^[a-zA-Z0-9]{8,}$">
             </p>
             您的居住地<br>
             <select name="area">
@@ -30,7 +30,7 @@
                 <option value="1">西藏</option>
             </select>
             <p>手机号<br>
-            <input type="tel"name="tel-number"required pattern="1+">
+            <input type="tel"name="tel-number"required pattern="^1[0-9]{10}$">
             </p>
             <p>常用设备</p>
             PC <input type="checkbox">
